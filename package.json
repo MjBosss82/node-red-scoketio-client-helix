@@ -1,0 +1,26 @@
+{
+  "name": "red-scoketio-client-helix",
+  "version": "0.1.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MjBosss82/node-red-scoketio-client-helix.git"
+  },
+  "keywords": [
+    "socket",
+    "io",
+    "socketio",
+    "helix",
+    "client"
+  ],
+  "author": "“Luca <“migliori@helix.it”>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MjBosss82/node-red-scoketio-client-helix/issues"
+  },
+  "homepage": "https://github.com/MjBosss82/node-red-scoketio-client-helix#readme"
+}
