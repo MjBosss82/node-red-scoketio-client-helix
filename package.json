@@ -1,6 +1,6 @@
 {
   "name": "red-socketio-client-helix",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Nodo per la creazione e gestione di una connessione SocketIo",
   "main": "index.js",
   "scripts": {
