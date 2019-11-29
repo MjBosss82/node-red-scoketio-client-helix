@@ -1,26 +1,36 @@
 {
-  "name": "red-scoketio-client-helix",
+  "name": "red-socketio-client-helix",
   "version": "0.1.0",
-  "description": "test",
+  "description": "Nodo per la creazione e gestione di una connessione SocketIo",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MjBosss82/node-red-scoketio-client-helix.git"
+    "url": "git+https://github.com/MjBosss82/node-red-socketio-client-helix.git"
+  },
+  "dependencies": {
+    "socket.io-client": "^2.3.0"
   },
   "keywords": [
     "socket",
     "io",
     "socketio",
     "helix",
-    "client"
+    "client",
+    "emit",
+    "listen"
   ],
+  "node-red": {
+    "nodes": {
+      "sck_hx": "sck_hx.js"
+    }
+},
   "author": "“Luca <“migliori@helix.it”>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MjBosss82/node-red-scoketio-client-helix/issues"
+    "url": "https://github.com/MjBosss82/node-red-socketio-client-helix/issues"
   },
-  "homepage": "https://github.com/MjBosss82/node-red-scoketio-client-helix#readme"
+  "homepage": "https://github.com/MjBosss82/node-red-socketio-client-helix#readme"
 }

@@ -1,0 +1,135 @@
+<script type="text/javascript">
+    RED.nodes.registerType('hx-sck-avvio',{
+        category: 'Helix-SocketIo',
+        color: '#a6bbcf',
+        defaults: {
+            protocollo: {value:"http://"},
+            host: {value:"localhost"},
+            port: {value:"8080"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel:"Client",
+        label: function() {
+            return this.name||"Client";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="hx-sck-avvio">
+  <div class="form-row">
+    <label for="node-input-protocollo">Protocollo</label>
+    <input type="text" id="node-input-protocollo" placeholder="protocollo">
+  </div>
+    <div class="form-row">
+      <label for="node-input-host"><i class="icon-tasks"></i> Host</label>
+      <input type="text" id="node-input-host" placeholder="host">
+    </div>
+    <div class="form-row">
+      <label for="node-input-port">Porta</label>
+      <input type="text" id="node-input-port" placeholder="port">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="hx-sck-avvio">
+    <p>Helix socket-Io-Cliente</p>
+</script>
+<!--
+------------------------------------------------------------------------------------
+-->
+<script type="text/javascript">
+    RED.nodes.registerType('hx-sck-emit',{
+        category: 'Helix-SocketIo',
+        color: '#a6bbcf',
+        defaults: {
+            name:{
+                    value:""
+            },
+            nome: {
+                value:"",
+                required: true
+            },
+            data_send:{
+                value:""
+            }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel:"Emit",
+        label: function() {
+            return this.name||"Emit - " + this.nome;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="hx-sck-emit">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Etichetta</label>
+        <input type="text" id="node-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-nome"><i class="icon-tag"></i> Nome emit</label>
+        <input type="text" id="node-input-nome" placeholder="nome">
+    </div>
+    <div class="form-row">
+        <label for="node-input-data_send"><i class="icon-tag"></i> Info</label>
+        <input type="text" id="node-input-data_send" placeholder="data_send">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="hx-sck-emit">
+    <p>Helix socket-Io-Cliente - Emit</p>
+    <h3>Input</h3>
+    <dl class="message-properties">
+        <dt>payload dal client
+            <span class="property-type">string</span>
+        </dt>
+        <h3>Details</h3>
+        <p>Collegato all'oggetto Client, che crea la connessione con un server, deve essere configurato il "Nome emit" ed eventuali dati da inviare.</p>
+        <dt>Inserimento dati asincroni
+            <span class="property-type">string</span>
+        </dt>
+        <h3>Details</h3>
+        <p>Può essere scatenato a piacere dopo la connessione, in questo caso il "Nome emit" da configurazione, ma eventuali dati da inviare devono essere passati al momento.</p>
+    </script>
+<!--
+------------------------------------------------------------------------------------
+-->
+<script type="text/javascript">
+    RED.nodes.registerType('hx-sck-ascolto',{
+        category: 'Helix-SocketIo',
+        color: '#a6bbcf',
+        defaults: {
+            name: {
+                value: ''
+            },nome: {
+                value:"",
+                required: true
+            }
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        paletteLabel:"Evento",
+        label: function() {
+            return this.name||"Evento - " + this.nome;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="hx-sck-ascolto">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Etichetta</label>
+        <input type="text" id="node-input-name" placeholder="name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-nome"><i class="icon-tag"></i> Nome evento</label>
+        <input type="text" id="node-input-nome" placeholder="nome">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="hx-sck-ascolto">
+    <p>Helix socket-Io-Cliente - Evento</p>
+</script>
